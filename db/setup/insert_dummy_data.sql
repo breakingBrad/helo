@@ -1,0 +1,2 @@
+INSERT INTO "users" ("username", "password", "profile_pic") VALUES ('test', '123', 'https://robohash.org/test');
+INSERT INTO "posts" ("title", "img", "author_id") VALUES ('test # 1', 'https://founditsharedit.files.wordpress.com/2009/05/horse460b_1012174c.jpg', '1');
