@@ -1,13 +1,38 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import axios from 'axios'
 
-class Post extends Component {
-  render() {
-    return(
-    <div>
-      Post
-    </div>
-    )
-  }
+class Post extends Component{
+    constructor(props){
+        super()
+        this.state = {
+            post: {}
+        }
+    }
+
+    componentWillMount() {
+        axios.get(`/api/post/${this.props.match.params.postid}`).then(response=>{
+            this.setState({post: response.data[0]})
+        })
+    }
+
+    render() {
+        return(
+            <div className='post'>
+            <div className='post-card'>
+                <div className='title-author'>
+                <h1 className='title'>{this.state.post.title}</h1>
+                <div className='post-user'>
+                    <p>by {this.state.post.username}</p>
+                    <img src={this.state.post.profile_pic} alt="profile" className='profile-thumbnail'/>
+                </div>
+                </div>
+                <div className='post-content'>
+                    <img src={this.state.post.img} alt="post" className='post-image'/>
+                    <p className='content-container'>{this.state.post.content}</p>
+                </div>
+            </div>
+            </div>
+        )
+    }
 }
-
-export default Post;
+export default Post

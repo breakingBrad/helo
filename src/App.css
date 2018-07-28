@@ -2,27 +2,242 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.post-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border: grey solid 1px;
+  margin: 0 5px;
+  width: 86%;
+  margin-left: 7%;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.post-summary p {
+  text-decoration: none;
+}
+
+.post-summary:hover {
+  box-shadow: rgba(71, 71, 71, 0.507) 0px 1px 6px 2px;
+}
+
+.post-summary h3,
+.post-summary h3:hover, 
+.post-summary h3:visited,
+.post-summary h3:link, 
+.post-summary h3:active {
+  padding-left: 30px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.profile-thumbnail {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 100%;
+}
+.post-user,
+.post-content,
+.title-author {
+  display: flex;
+}
+
+.post-image {
+  width: 50%;
+  height: 50%;
+  border-radius: 1px;
+  box-shadow: rgba(71, 71, 71, 0.507) 0px 0px 0px 1px;
+}
+.nav-bar,
+.nav-bar-top {
+  display: flex;
+  flex-direction: column;
   color: white;
+  align-items: center;
+}
+.nav-bar {
+  justify-content: space-between;
+  height: 100vh;
+  padding: 20px;
+  width: 8vw;
+  background-image: linear-gradient(0deg,#ff7abe,#ff9770);
 }
 
-.App-title {
-  font-size: 1.5em;
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-intro {
-  font-size: large;
+.nav-bar-icon,
+.nav-profile-picture {
+  height: 80px;
+  width: 80px;
+  margin: 20px 0;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.dashboard,
+.form,
+.post {
+  width: 92vw;
+  background-color: #f2f2f2;
+  height: 100vh;
+}
+
+.nav-profile-picture {
+  background-color: white;
+  border-radius: 100%;
+  margin-bottom: 0;
+}
+
+.auth-container {
+  color: white;
+  border: transparent;
+  box-shadow: rgba(71, 71, 71, 0.507) 0px 4px 4px 4px;
+  padding: 50px 100px;
+}
+
+.login {
+  margin: 20px 10px;
+}
+
+.input {
+  width: 90%;
+  height: 25px;
+  font-size: 18px;
+}
+
+.auth-button {
+  border-radius: 1px;
+  background-image: radial-gradient(circle at 50%-46%, #737373, #403d39);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rbga(0, 0, 0, 0.2);
+  color: white;
+  font-size: 15px;
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+}
+
+.auth-container .auth-button {
+  margin: 10px;
+}
+
+.auth-button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.auth-container h1 {
+  font-size: 70px;
+  margin: 10px;
+}
+
+.dashboard-search {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin-bottom: 20px;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 50px;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: rgba(71, 71, 71, 0.507) 0px 4px 4px 4px;
+}
+
+.search-bar {
+  width: 500px;
+  margin: 10px 10px 10px 30px;
+  height: 25px;
+  font-size: 18px;
+}
+
+.posts-container {
+  background-color: white;
+  width: 80%;
+  margin-left: 10%;
+  padding: 40px 0;
+  border-radius: 5px;
+  box-shadow: rgba(71, 71, 71, 0.507) 0px 4px 4px 4px;
+}
+
+.checkbox {
+  margin-right: 30px;
+}
+
+link:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  background-color: white;
+  margin-left: 8%;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(71, 71, 71, 0.507) 0px 4px 4px 4px;
+}
+
+.title-author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-content {
+  display: flex;
+  justify-content: center;
+}
+
+.post-content img {
+  margin-right: 30px;
+}
+
+#post-button {
+  margin: 20px 45px;
+  align-self: flex-end;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.content-container {
+  width: 45%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ff9770;
+  margin: 0 0 10px;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 40px;
+  border-radius: 5px;
+  box-shadow: rgba(71, 71, 71, 0.507) 0px 4px 4px 4px;
+}
+
+.form .title,
+h3 {
+  align-self: baseline;
+  margin-left: 48px;
+  margin-bottom: 0;
 }
